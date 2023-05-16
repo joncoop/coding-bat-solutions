@@ -12,7 +12,7 @@ public int sumDouble(int a, int b) {
   int sum = a + b;
   
   if (a == b) {
-  sum *= 2;  
+    sum *= 2;  
   }
   
   return sum;
@@ -23,7 +23,7 @@ public int diff21(int n) {
   int diff = Math.abs(21 - n);
   
   if (n > 21) {
-  diff *= 2;
+    diff *= 2;
   }
   
   return diff;
@@ -52,17 +52,17 @@ public boolean nearHundred(int n) {
 
 public boolean posNeg(int a, int b, boolean negative) {
   if (negative) {
-  return a < 0 && b < 0;
+    return a < 0 && b < 0;
   }
   else {
-  return a * b < 0;
+    return a * b < 0;
   }
 }
 
 
 public String notString(String str) {
   if (str.length() > 2 && str.substring(0, 3).equals("not")) {  
-  return str;
+    return str;
   }
 
   return "not " + str;
@@ -77,7 +77,7 @@ public String missingChar(String str, int n) {
 
 public String frontBack(String str) {
   if (str.length() <= 1) {
-  return str;
+    return str;
   }
   
   String first = str.substring(0, 1);
@@ -92,10 +92,10 @@ public String front3(String str) {
   String front;
   
   if (str.length() > 2) {
-  front = str.substring(0, 3);
+    front = str.substring(0, 3);
   }
   else {
-  front = str;
+    front = str;
   }
   
   return front + front + front;
@@ -122,10 +122,10 @@ public String front22(String str) {
   
   if (str.length() > 1)
   {
-  front = str.substring(0, 2);
+    front = str.substring(0, 2);
   }
   else {
-  front = str;
+    front = str;
   }
   
   return front + str + front;
@@ -134,7 +134,7 @@ public String front22(String str) {
 
 public boolean startHi(String str) {
   if (str.length() < 2) {
-  return false;
+    return false;
   }
   
   return str.substring(0, 2).equals("hi");
@@ -182,7 +182,7 @@ public String delDel(String str) {
   int loc = str.indexOf("del");
   
   if (loc == 1) {
-  str = str.substring(0, 1) + str.substring(4);
+    str = str.substring(0, 1) + str.substring(4);
   }
   
   return str;
@@ -199,11 +199,11 @@ public String startOz(String str) {
   String second = "";
   
   if (str.length() > 0 && str.substring(0, 1).equals("o")) {
-  first = "o";
+    first = "o";
   }
   
   if (str.length() > 1 && str.substring(1, 2).equals("z")) {
-  second = "z";
+    second = "z";
   }
   
   return first + second;
@@ -220,13 +220,13 @@ public int close10(int a, int b) {
   int bDiff = Math.abs(b - 10);
   
   if (aDiff < bDiff) {
-  return a;
+    return a;
   }
   else if (aDiff > bDiff) {
-  return b;
+    return b;
   }
   else {
-  return 0;
+    return 0;
   }
 }
 
@@ -237,14 +237,14 @@ public boolean inRange(int n, int low, int high) {
   
 public boolean in3050(int a, int b) {
   return inRange(a, 30, 40) && inRange(b, 30, 40) || 
-     inRange(a, 40, 50) && inRange(b, 40, 50);
+         inRange(a, 40, 50) && inRange(b, 40, 50);
 }
 
 
 // helper function for max1020
 public int fix(int n) {
   if (n < 10 || n > 20) {
-  return 0;
+    return 0;
   }
   
   return n;
@@ -272,11 +272,11 @@ public boolean stringE(String str) {
   int count = 0;
   
   for (int i=0; i<str.length(); i++) {
-  String letter = str.substring(i, i + 1);
-  
-  if (letter.equals("e")) {
-  count++;
-  }  
+    String letter = str.substring(i, i + 1);
+    
+    if (letter.equals("e")) {
+      count++;
+    }  
   }
   
   return 1 <= count && count <= 3;
@@ -294,12 +294,12 @@ public String endUp(String str) {
   int len = str.length();
   
   if (len < 3) {
-  begin = "";
-  end = str;
+    begin = "";
+    end = str;
   }
   else {
-  begin = str.substring(0, len - 3);
-  end = str.substring(len - 3);  
+    begin = str.substring(0, len - 3);
+    end = str.substring(len - 3);  
   }
   
   return begin + end.toUpperCase();
@@ -310,7 +310,7 @@ public String everyNth(String str, int n) {
   String result = "";
   
   for (int i = 0; i < str.length(); i += n) {
-  result += str.substring(i, i+1);
+    result += str.substring(i, i+1);
   }
   
   return result;
