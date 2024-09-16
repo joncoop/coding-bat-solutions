@@ -46,6 +46,11 @@ def caught_speeding(speed, is_birthday):
     return 2
 
 
+# This one is really stupid
+def caught_speeding(speed, is_birthday):
+  return (speed - 5 * is_birthday) // 61 + (speed - 5 * is_birthday) // 81
+
+
 def sorta_sum(a, b):
   sum = a + b
   
@@ -53,6 +58,11 @@ def sorta_sum(a, b):
     sum = 20
   
   return sum
+
+
+# Ok, this is kinda fun.
+def sorta_sum(a, b):
+  return [a + b, 20][10 <= a + b <= 19]
 
 
 def alarm_clock(day, vacation):
