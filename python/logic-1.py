@@ -14,6 +14,11 @@ def date_fashion(you, date):
     return 1
 
 
+# A dumb one-liner
+def date_fashion(you, date):
+  return ((you >= 8 or date >= 8) + 1) * (you > 2 and date > 2)
+
+
 def squirrel_play(temp, is_summer):
   low = 60
   high = 90
@@ -24,7 +29,7 @@ def squirrel_play(temp, is_summer):
   return low <= temp <= high
 
 
-# dumb one-liner
+# Another dumb one-liner
 def squirrel_play(temp, is_summer):
   return 60 <= temp <= 90 + 10 * is_summer
 
@@ -68,7 +73,7 @@ def love6(a, b):
   s = a + b
   d = abs(a - b)
   
-  return 6 in [a, b, s, d]
+  return 6 in [a, b, a, d]
 
 
 def in1to10(n, outside_mode):
