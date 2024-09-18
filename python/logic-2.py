@@ -1,5 +1,5 @@
-# I had some fun trying to one-liner some these.
-# The commented out code is generally the sensible solution.
+# I had some fun trying to one-liner these.
+# The first commented out solution is the sensible one.
 
 def make_bricks(small, big, goal):
   '''
