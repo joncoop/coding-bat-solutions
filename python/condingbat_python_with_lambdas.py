@@ -87,4 +87,9 @@ near_ten = lambda num : num % 10 in [8, 9, 0, 1, 2]
 # Logic-2
 
 make_bricks = lambda small, big, goal : small + 5 * big >= goal and small >= goal % 5
+lone_sum = lambda a, b, c: sum([n for n in [a, b, c] if [a, b, c].count(n) == 1])
 lucky_sum = lambda a, b, c : 0 if a == 13 else a if b == 13 else a + b if c == 13 else a + b + c
+no_teen_sum = lambda a, b, c: sum([n if n not in (13, 14, 17, 18, 19) else 0 for n in (a, b, c)])
+round_sum = lambda a, b, c: sum([(n + 5) // 10 * 10 for n in (a, b, c)])
+close_far = lambda a, b, c: (abs(a - b) <= 1) + (abs(a - c) <= 1) + (abs(b - c) <= 1) == 1
+make_chocolate = lambda small, big, goal: [goal % 5, goal - big * 5, -1][max(big * 5 < goal, 2 * (big * 5 + small < goal or small < goal % 5))]
