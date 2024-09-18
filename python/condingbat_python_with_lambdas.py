@@ -20,6 +20,14 @@ front_back = lambda str : str[-1] + str[1: -1] + str[0] if len(str) > 1 else str
 front3 = lambda str : 3 * str[:3] if len(str) >= 3 else 3 * str
 
 
+# Warmup-2
+string_times = lambda str, n: n * str
+front_times = lambda str, n: n * str[:3]
+string_bits = lambda str: str[0::2]
+array_count9 = lambda nums: nums.count(9)
+array_front9 = lambda nums: 9 in nums[:4]
+
+
 # String 1
 
 hello_name = lambda name : 'Hello ' + name + '!'
@@ -33,6 +41,12 @@ without_end = lambda str : str[1: -1]
 combo_string = lambda a, b : a + b + a if len(a) < len(b) else b + a + b
 non_start = lambda a, b : a[1:] + b[1:]
 left2 = lambda str : str[2: ] + str[: 2]
+
+
+# String-2
+double_char = lambda str: ''.join([2 * c for c in str])
+count_hi = lambda str: str.count('hi')
+cat_dog = lambda str: str.count('cat') == str.count('dog')
 
 
 # List-1
@@ -49,6 +63,12 @@ sum2 = lambda nums: sum(nums[:2])
 middle_way = lambda a, b : [a[1], b[1]]
 make_ends = lambda nums : [nums[0], nums[-1]]
 has23 = lambda nums : 2 in nums or 3 in nums
+
+
+# List-2
+count_evens = lambda nums: [n % 2 for n in nums].count(0)
+big_diff = lambda nums: max(nums) - min(nums)
+centered_average = lambda nums: (sum(nums) - max(nums) - min(nums)) / (len(nums) - 2)
 
 
 # Logic-1
