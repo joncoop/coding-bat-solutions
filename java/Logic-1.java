@@ -113,11 +113,10 @@ public boolean more20(int n) {
 public boolean old35(int n) {
   boolean mult3 = n % 3 == 0;
   boolean mult5 = n % 5 == 0;
-  boolean mult15 = mult3 && mult5;
-  
-  return !mult15 && (mult3 || mult5);
+
+  return mult3 != mult5;
 }
- 
+
 
 public boolean less20(int n) {
   int diff = n % 20;
