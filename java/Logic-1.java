@@ -119,9 +119,9 @@ public boolean old35(int n) {
 
 
 public boolean less20(int n) {
-  int diff = n % 20;
+  int remainder = n % 20;
   
-  return diff == 18 || diff == 19;
+  return remainder == 18 || remainder == 19;
 }
   
 
@@ -188,35 +188,34 @@ public String fizzString(String str) {
     return str;
   }
 }
-  
+
 
 public String fizzString2(int n) {
   String result = "";
   
-  if (n % 15 == 0) {
-    result = "FizzBuzz";
+  if (n % 3 == 0) {
+    result += "Fizz";
   }
-  else if (n % 3 == 0) {
-    result = "Fizz";
+  
+  if (n % 5 == 0) {
+    result += "Buzz";
   }
-  else if (n % 5 == 0) {
-    result = "Buzz";
-  }
-  else {
+  
+  if (result.length() == 0) {
     result = Integer.toString(n);
   }
   
   return result + "!";
 }
-  
+
 
 public boolean twoAsOne(int a, int b, int c) {
 
-  int a_plus_b = a + b;
-  int b_plus_c = b + c;
-  int a_plus_c = a + c;
+  boolean abIsC = a + b == c;
+  boolean acIsB = a + c == b;
+  boolean bcIsA = b + c == a;
   
-  return a_plus_b == c || b_plus_c == a || a_plus_c == b;
+  return abIsC || acIsB || bcIsA;
 }
   
   
@@ -224,24 +223,22 @@ public boolean inOrder(int a, int b, int c, boolean bOk) {
   if (bOk) {
     return b < c;
   }
-  else {
-    return a < b && b < c;
-  }
+
+  return a < b && b < c;
 }
   
 
 public boolean inOrderEqual(int a, int b, int c, boolean equalOk) {
-  // a clear solution
   /*
+  // a clear solution
   if (equalOk) {
     return a <= b && b <= c;
   }
-  else {
-    return a < b && b < c;
-  }
+
+  return a < b && b < c;
   */
   
-  // a slightly too 'clever' solution, maybe
+  // a slightly too 'clever' solution
   if (equalOk) {
     b += 1; c += 2;
   }
