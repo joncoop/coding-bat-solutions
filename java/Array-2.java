@@ -44,18 +44,20 @@ public int sum13(int[] nums) {
   int i = 0;
   
   while (i < nums.length) {
-    if (nums[i] != 13) {
-      sum += nums[i];
-      i += 1;  
+    int value = nums[i];
+    
+    if (value == 13) {
+      i += 2;    
     }  
     else {
-      i += 2;
+      sum += nums[i];      
+      i += 1;
     }
   }
   
   return sum;
 }
-  
+
 
 public int sum67(int[] nums) {
   boolean countIt = true;
