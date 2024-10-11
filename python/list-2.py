@@ -47,17 +47,19 @@ def centered_average(nums):
 
 
 def sum13(nums):
-  sum = 0
-  i = 0
+  total = 0
+  index = 0
   
-  while i < len(nums):
-    if nums[i] != 13:
-      sum += nums[i]
-      i += 1
+  while index < len(nums):
+    value = nums[index]
+    
+    if value == 13:
+      index += 2
     else:
-      i += 2
+      total += value
+      index += 1
       
-  return sum
+  return total
 
 
 def sum67(nums):
