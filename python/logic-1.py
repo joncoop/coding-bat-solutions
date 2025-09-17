@@ -83,7 +83,7 @@ def love6(a, b):
   s = a + b
   d = abs(a - b)
   
-  return 6 in [a, b, a, d]
+  return 6 in [a, b, s, d]
 
 
 def in1to10(n, outside_mode):
@@ -97,3 +97,4 @@ def near_ten(num):
   ones_digit = num % 10
   
   return ones_digit <= 2 or ones_digit >= 8
+
