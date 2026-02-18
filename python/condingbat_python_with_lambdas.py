@@ -29,7 +29,7 @@ array_count9 = lambda nums: nums.count(9)
 array_front9 = lambda nums: 9 in nums[:4]
 
 
-# String 1
+# String-1
 
 hello_name = lambda name: 'Hello ' + name + '!'
 make_abba = lambda a, b: a + b + b + a
@@ -96,3 +96,4 @@ no_teen_sum = lambda a, b, c: sum([n if n not in (13, 14, 17, 18, 19) else 0 for
 round_sum = lambda a, b, c: sum([(n + 5) // 10 * 10 for n in (a, b, c)])
 close_far = lambda a, b, c: (abs(a - b) <= 1) + (abs(a - c) <= 1) + (abs(b - c) <= 1) == 1
 make_chocolate = lambda small, big, goal: [goal % 5, goal - big * 5, -1][max(big * 5 < goal, 2 * (big * 5 + small < goal or small < goal % 5))]
+
