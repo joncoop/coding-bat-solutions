@@ -72,7 +72,7 @@ has23 = lambda nums: 2 in nums or 3 in nums
 count_evens = lambda nums: [n % 2 for n in nums].count(0)
 big_diff = lambda nums: max(nums) - min(nums)
 centered_average = lambda nums: (sum(nums) - max(nums) - min(nums)) / (len(nums) - 2)
-sum13 = 
+sum13 = lambda nums: sum(nums[i] if nums[i] != 13 and (i == 0 or nums[i - 1] != 13) else 0 for i in range(len(nums)))
 sum67 =
 has22 = lambda nums: sum(nums[i] == nums[i + 1] == 2 for i in range(len(nums) - 1)) > 0
 
@@ -96,5 +96,6 @@ no_teen_sum = lambda a, b, c: sum([n if n not in (13, 14, 17, 18, 19) else 0 for
 round_sum = lambda a, b, c: sum([(n + 5) // 10 * 10 for n in (a, b, c)])
 close_far = lambda a, b, c: (abs(a - b) <= 1) + (abs(a - c) <= 1) + (abs(b - c) <= 1) == 1
 make_chocolate = lambda small, big, goal: [goal % 5, goal - big * 5, -1][max(big * 5 < goal, 2 * (big * 5 + small < goal or small < goal % 5))]
+
 
 
