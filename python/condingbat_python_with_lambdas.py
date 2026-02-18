@@ -5,7 +5,6 @@ Just seeing how many I could solve with lambda functions.
 '''
 
 # Warmup-1
-
 sleep_in = lambda weekday, vacation : not weekday or vacation
 monkey_trouble = lambda a_smile, b_smile : a_smile == b_smile
 sum_double = lambda a, b : 2 * (a + b) if a == b else a + b
@@ -21,19 +20,17 @@ front3 = lambda str : 3 * str[:3] if len(str) >= 3 else 3 * str
 
 
 # Warmup-2
-
 string_times = lambda str, n: n * str
 front_times = lambda str, n: n * str[:3]
 string_bits = lambda str: str[0::2]
-string_splosion =
+string_splosion = lambda str: ''.join(str[0: i] for i in range(len(str) + 1))
 last2 = 
 array_count9 = lambda nums: nums.count(9)
 array_front9 = lambda nums: 9 in nums[:4]
-array123 = 
-string_match =
+array123 = lambda nums: sum(nums[i: i + 3] == [1, 2, 3] for i in range(len(nums))) > 0
+string_match = lambda a, b: sum(a[i: i + 2] == b[i: i + 2] for i in range(len(a) - 1))
 
 # String-1
-
 hello_name = lambda name: 'Hello ' + name + '!'
 make_abba = lambda a, b: a + b + b + a
 make_tags = lambda tag, word: '<' + tag + '>' + word + '</' + tag + '>'
@@ -48,7 +45,6 @@ left2 = lambda str: str[2: ] + str[: 2]
 
 
 # String-2
-
 double_char = lambda str: ''.join([2 * c for c in str])
 count_hi = lambda str: str.count('hi')
 cat_dog = lambda str: str.count('cat') == str.count('dog')
@@ -58,7 +54,6 @@ xyz_there = lambda str: sum((' ' + str)[i] != '.' and (' ' + str)[i: i + 4][1:] 
 
 
 # List-1
-
 first_last6 = lambda nums: nums[0] == 6 or nums[-1] == 6
 same_first_last = lambda nums: len(nums) > 0 and nums[0] == nums[-1]
 make_pi = lambda :[3, 1, 4]
@@ -74,7 +69,6 @@ has23 = lambda nums: 2 in nums or 3 in nums
 
 
 # List-2
-
 count_evens = lambda nums: [n % 2 for n in nums].count(0)
 big_diff = lambda nums: max(nums) - min(nums)
 centered_average = lambda nums: (sum(nums) - max(nums) - min(nums)) / (len(nums) - 2)
@@ -83,7 +77,6 @@ sum67 =
 has22 = lambda nums: sum(nums[i] == nums[i + 1] == 2 for i in range(len(nums) - 1)) > 0
 
 # Logic-1
-
 cigar_party = lambda cigars, is_weekend: cigars >= 40 if is_weekend else 40 <= cigars <= 60
 date_fashion = lambda you, date: 0 if you <= 2 or date <= 2 else 2 if you >= 8 or date >= 8 else 1
 squirrel_play = lambda temp, is_summer: 60 <= temp <= 100 if is_summer else 60 <= temp <= 90
@@ -96,7 +89,6 @@ near_ten = lambda num: num % 10 in [8, 9, 0, 1, 2]
 
 
 # Logic-2
-
 make_bricks = lambda small, big, goal: small + 5 * big >= goal and small >= goal % 5
 lone_sum = lambda a, b, c: sum([n for n in [a, b, c] if [a, b, c].count(n) == 1])
 lucky_sum = lambda a, b, c: 0 if a == 13 else a if b == 13 else a + b if c == 13 else a + b + c
