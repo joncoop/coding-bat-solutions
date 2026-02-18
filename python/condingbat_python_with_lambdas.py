@@ -25,9 +25,12 @@ front3 = lambda str : 3 * str[:3] if len(str) >= 3 else 3 * str
 string_times = lambda str, n: n * str
 front_times = lambda str, n: n * str[:3]
 string_bits = lambda str: str[0::2]
+string_splosion =
+last2 = 
 array_count9 = lambda nums: nums.count(9)
 array_front9 = lambda nums: 9 in nums[:4]
-
+array123 = 
+string_match =
 
 # String-1
 
@@ -49,6 +52,9 @@ left2 = lambda str: str[2: ] + str[: 2]
 double_char = lambda str: ''.join([2 * c for c in str])
 count_hi = lambda str: str.count('hi')
 cat_dog = lambda str: str.count('cat') == str.count('dog')
+count_code = lambda str: sum(str[i] == 'c' and str[i + 1] == 'o' and str[i + 3] == 'e' for i in range(len(str) - 3))
+end_other = lambda a, b: a.lower().endswith(b.lower()) or b.lower().endswith(a.lower())
+xyz_there = lambda str: sum((' ' + str)[i] != '.' and (' ' + str)[i: i + 4][1:] == 'xyz' for i in range(len(str))) > 0
 
 
 # List-1
@@ -72,7 +78,9 @@ has23 = lambda nums: 2 in nums or 3 in nums
 count_evens = lambda nums: [n % 2 for n in nums].count(0)
 big_diff = lambda nums: max(nums) - min(nums)
 centered_average = lambda nums: (sum(nums) - max(nums) - min(nums)) / (len(nums) - 2)
-
+sum13 = 
+sum67 =
+has22 = lambda nums: sum(nums[i] == nums[i + 1] == 2 for i in range(len(nums) - 1)) > 0
 
 # Logic-1
 
@@ -96,4 +104,3 @@ no_teen_sum = lambda a, b, c: sum([n if n not in (13, 14, 17, 18, 19) else 0 for
 round_sum = lambda a, b, c: sum([(n + 5) // 10 * 10 for n in (a, b, c)])
 close_far = lambda a, b, c: (abs(a - b) <= 1) + (abs(a - c) <= 1) + (abs(b - c) <= 1) == 1
 make_chocolate = lambda small, big, goal: [goal % 5, goal - big * 5, -1][max(big * 5 < goal, 2 * (big * 5 + small < goal or small < goal % 5))]
-
