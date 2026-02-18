@@ -76,7 +76,7 @@ centered_average = lambda nums: (sum(nums) - max(nums) - min(nums)) / (len(nums)
 cigar_party = lambda cigars, is_weekend : cigars >= 40 if is_weekend else 40 <= cigars <= 60
 date_fashion = lambda you, date: 0 if you <= 2 or date <= 2 else 2 if you >= 8 or date >= 8 else 1
 squirrel_play = lambda temp, is_summer : 60 <= temp <= 100 if is_summer else 60 <= temp <= 90
-caught_speeding = 
+caught_speeding = lambda speed, is_birthday: int(speed - 5 * is_birthday > 60) + int(speed - 5 * is_birthday > 80)
 sorta_sum = lambda a, b : 20 if 10 <= a + b <= 19 else a + b
 alarm_clock = lambda day, vacation : 'off' if vacation and day in [0, 6] else '10:00' if vacation or day in [0, 6] else '7:00'
 love6 = lambda a, b : a == 6 or b == 6 or a + b == 6 or abs(a - b) == 6
@@ -93,3 +93,4 @@ no_teen_sum = lambda a, b, c: sum([n if n not in (13, 14, 17, 18, 19) else 0 for
 round_sum = lambda a, b, c: sum([(n + 5) // 10 * 10 for n in (a, b, c)])
 close_far = lambda a, b, c: (abs(a - b) <= 1) + (abs(a - c) <= 1) + (abs(b - c) <= 1) == 1
 make_chocolate = lambda small, big, goal: [goal % 5, goal - big * 5, -1][max(big * 5 < goal, 2 * (big * 5 + small < goal or small < goal % 5))]
+
