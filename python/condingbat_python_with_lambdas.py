@@ -24,7 +24,7 @@ string_times = lambda str, n: n * str
 front_times = lambda str, n: n * str[:3]
 string_bits = lambda str: str[0::2]
 string_splosion = lambda str: ''.join(str[0: i] for i in range(len(str) + 1))
-last2 = 
+last2 = lambda str: max(sum(str[i: i +2] == str[-2:] for i in range(0, len(str) - 1)) - 1, 0) 
 array_count9 = lambda nums: nums.count(9)
 array_front9 = lambda nums: 9 in nums[:4]
 array123 = lambda nums: sum(nums[i: i + 3] == [1, 2, 3] for i in range(len(nums))) > 0
@@ -96,3 +96,4 @@ no_teen_sum = lambda a, b, c: sum([n if n not in (13, 14, 17, 18, 19) else 0 for
 round_sum = lambda a, b, c: sum([(n + 5) // 10 * 10 for n in (a, b, c)])
 close_far = lambda a, b, c: (abs(a - b) <= 1) + (abs(a - c) <= 1) + (abs(b - c) <= 1) == 1
 make_chocolate = lambda small, big, goal: [goal % 5, goal - big * 5, -1][max(big * 5 < goal, 2 * (big * 5 + small < goal or small < goal % 5))]
+
